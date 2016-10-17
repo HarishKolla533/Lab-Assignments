@@ -124,6 +124,8 @@ angular.module('myApp', [])
                     if (result != null && result.response != null && result.response.tips != null &&
                         result.response.tips.items != null) {
                         $scope.mostRecentReview = result.response.tips.items[0];
+                        console.log($scope.mostRecentReview);
+                        console.log(venueSelected.id);
                         //This is the Alchemy API for getting the sentiment of the most recent review for a place.
                         var callback = $http.get("http://gateway-a.watsonplatform.net/calls/text/TextGetTextSentiment" +
                             "?apikey=bkayZOMvuy8aZOhIgxq94K9Oe7Y70Hw55" +
